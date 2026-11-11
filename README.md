@@ -4,7 +4,7 @@ Welcome to the primary architectural specification repository for the **QlockTap
 
 ---
 
-## 🏛️ System Core Architecture & Design Patterns
+## System Core Architecture & Design Patterns
 
 The platform is designed following the **Hexagonal Architecture (Ports and Adapters) Pattern**. This architectural separation guarantees that core domain business calculations (such as dynamic earned wage cap pooling and financial clearing logic) remain completely isolated from volatile third-party network APIs, consumer client variations, and database ingestion channels.
 
@@ -78,7 +78,7 @@ graph TD
 
 ---
 
-## 🛡️ Applied Cybersecurity & Hardening Controls
+## Applied Cybersecurity & Hardening Controls
 
 Drawing directly from international enterprise information security methodologies, the core platform codebase is hardened against advanced security threat vectors:
 * **Authenticated Column-Level Encryption:** Sensitive banking strings and routing fields are fully scrambled prior to storage using an authenticated **AES-256-GCM cipher pattern** holding automated Initialization Vectors (IV) and Galois authentication tags to completely neutralize direct database injection or internal breaching threats.
@@ -86,15 +86,3 @@ Drawing directly from international enterprise information security methodologie
 * **Database Connection Pooling:** Backend container nodes map asynchronous transactions natively using **PgBouncer protocols over encrypted Port 6543** to completely eliminate connection socket starvation anomalies under massive spikes in concurrent traffic.
 
 ---
-
-## ⚙️ Engineering Staging Verification
-
-To run and verify the core full-stack API handshake circuit inside a localized developer sandbox environment:
-
-```bash
-# 1. Purge pre-bundler development caching fragments
-rm -rf dist .nest
-
-# 2. Spin up the localized high-performance server watcher loop
-npm run start:dev
-```
